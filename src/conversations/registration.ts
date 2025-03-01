@@ -4,7 +4,7 @@
 import { api, PromoCodeError, ValidationError } from "../api/index.ts";
 import { logger } from "../utils/logger.ts";
 import type { MyContext, MyConversation } from "../bot/context.ts";
-import { getSkipKeyboard, getMainKeyboard, isCommand, CALLBACK_DATA, showMainMenu } from "../utils/telegram.ts";
+import { getSkipKeyboard, isCommand, CALLBACK_DATA, showMainMenu } from "../utils/telegram.ts";
 import { validateBirthDate, convertDate, getMinimumBirthDate, formatDateForApi } from "../utils/date.ts";
 import { validateAndFormatPhone } from "../utils/phone.ts";
 

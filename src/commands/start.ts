@@ -3,7 +3,7 @@
  */
 import { logger } from "../utils/logger.ts";
 import type { MyContext } from "../bot/context.ts";
-import { getMainKeyboard, showMainMenu } from "../utils/telegram.ts";
+import {  showMainMenu } from "../utils/telegram.ts";
 
 /**
  * Обработчик команды /start

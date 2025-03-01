@@ -3,7 +3,7 @@
  */
 import { logger } from "../utils/logger.ts";
 import type { MyContext } from "./context.ts";
-import { getMainKeyboard, CALLBACK_DATA, showMainMenu } from "../utils/telegram.ts";
+import { CALLBACK_DATA, showMainMenu } from "../utils/telegram.ts";
 import { userService } from "../services/user.service.ts";
 import { analyticsService } from "../services/analytics.service.ts";
 import { InlineQueryResultBuilder, Fuse } from "../deps.ts";
