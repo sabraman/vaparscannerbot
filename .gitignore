@@ -15,7 +15,3 @@ Thumbs.db
 .deno/
 *.orig
 *.swp
-
-# Временные файлы
-/logs/
-/temp/

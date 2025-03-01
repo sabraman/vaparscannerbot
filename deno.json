@@ -1,10 +1,42 @@
 {
-  "deploy": {
-    "project": "c34b8bb5-e4b6-4e26-ab6e-709a69040fc9",
-    "exclude": [
-      "**/node_modules"
-    ],
-    "include": [],
-    "entrypoint": "server.ts"
-  }
+	"deploy": {
+		"project": "c34b8bb5-e4b6-4e26-ab6e-709a69040fc9",
+		"exclude": [
+			"**/node_modules",
+			"**/.git",
+			"**/.idea",
+			"**/.vscode",
+			"**/.DS_Store",
+			"**/.env",
+			"**/.env.*",
+			"!**/.env.example"
+		],
+		"include": [],
+		"entrypoint": "src/server.ts"
+	},
+	"tasks": {
+		"start": "deno run --allow-net --allow-env --allow-read --allow-write --allow-import --env-file=.env src/server.ts",
+		"dev": "deno run --allow-net --allow-env --allow-read --allow-write --allow-import --watch --env-file=.env src/poll.ts",
+		"check": "deno check --allow-import src/server.ts src/poll.ts"
+	},
+	"fmt": {
+		"files": {
+			"include": ["src/"]
+		},
+		"options": {
+			"useTabs": false,
+			"lineWidth": 100,
+			"indentWidth": 2,
+			"singleQuote": false,
+			"proseWrap": "preserve"
+		}
+	},
+	"lint": {
+		"files": {
+			"include": ["src/"]
+		},
+		"rules": {
+			"tags": ["recommended"]
+		}
+	}
 }
